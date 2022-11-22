@@ -1,0 +1,126 @@
+1.  What is Android SDK?
+
+
+2.  Add executables to the system path
+
+        Add platform tools directory to the system path in windows
+
+        -> Android Debug bridge (adb) [Android/Sdk/platform tools]
+        -> Get the path of this adb and put as the environment variables.
+        -> Run the command "adb devices"
+
+
+
+3.  Knowing the API levels of android for each android version. For example Android 10 is API version 29.
+
+4.  Import sample apps, using import code samples
+
+5.  Possible Project scopes
+
+6.  File-> Manage IDE Settings -> Export Settings to save the current Android Studio settings. This will generate a .zip. Next time
+    we install Android studio and it asks for importing settings give the path to the .zip folder
+
+7.  When we use an emulator it is necessary to ensure that we are using the latest version of HAXM. Tools -> SDK Manager -> SDK Tools
+    Check whether HAXM (Hardware Accelerated Executions Manager) Installer is checked. 
+
+
+8.  When connecting an external device make sure USB debugging/Wireless debugging is turned ON.
+
+9.  Add the project into GitHub by using Tools -> VCS operations, generate a token and add it in.
+
+10. Tools -> Resource Manager is something useful to create drawables, colors, layouts etc..
+
+11. Gradle Files, IntelliJ IDEA Default Keymap for default key bindings.
+
+12. About Gradle Files,
+
+        -> There are two gradle build files. One for the project and other for the module.
+        -> Project gradle file contains the settings related to the project.
+        
+        -> Add external libraries with dependencies,
+
+            -> These are stored in the build.gradle (Module file)
+
+        ->Manage dependency version variables
+
+            ->  This is used to store the version number of external libraries. Example : 
+                    
+                    def gson_version = "2.8.6"
+                    implementation "com.google.code.gson:gson:$gson_version"
+
+            ->  def is used when we are declaring the variable in build.gradle Module gradle file. If we are moving to the
+                project gradle file, then in the buildscript object declare it as ext.gson_version = "2.8.6"
+
+
+            ->  The project gradle declaration is the global level declaration.
+
+
+        -> Build Signed APK's for deployment
+
+            -> Generate Signed Bundle or APK options.
+
+                -> What is Android App Bundle
+                -> What is APK
+
+                -> The process is simple and we get a link where will get the APK.
+
+
+        -> Build App Bundles for Google Play
+
+            -> Generating the aab file is also a straight process and we can get the aab file which is submitted to Google Play.
+            -> This also generates a key file with .pepk extension.
+
+
+        -> Define and Manage Build variants
+
+            -> File/Project Structure/Build Variants
+
+
+13. Create and Edit Code Files
+
+        ->  When a suggestion occurs midway, like we had issue of suggestions occuring twice do not press ENTER on the suggestion,
+            press TAB on the suggestion so it occurs only once.
+
+        -> To get a function signature, say Toast.makeText() place the cursor at the start of the parenthesis and press Ctrl+P
+
+
+
+14. Refactor has a lot of options like we can select a bunch of code and extract it as a separate function.
+
+
+15. Log function is useful to give debug messages of a particular type say info, error in Logcat.
+
+
+16. Live templates in android studio.
+
+
+17. Checkout the design mode to know what all things we have like textviews, floating buttons etc..
+
+
+18. MotionLayout, MotionEditor
+
+
+19. Alt+Shift+Arrow Keys to move a line of code up or down.
+
+
+20. Android Profiler has four categories which shows usages for CPU, memory, network, battery.
+
+
+21. Database Inspector.
+
+
+22. In case of crash to filter it out in logcat we can use the tag AndroidRuntime
+
+
+23. Create bitmap and vector images
+
+    -> To generate a new launcher icon, select module, right click, New and select image asset.
+
+
+24. Create vector image assets (Difference from bitmap images is that we don't need multiple images to fit different screens we only need one)
+
+
+25. Other courses 
+
+    -> Android development essential training series
+    -> Kotlin skills
